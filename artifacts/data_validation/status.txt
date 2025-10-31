@@ -1,2 +1,1 @@
 Validation status: True
-All columns match the schema.

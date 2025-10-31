@@ -23,13 +23,9 @@ class DataValiadtion:
             # Write detailed results
             with open(self.config.STATUS_FILE, "w") as f:
                 if validation_status:
-                    f.write("Validation status: True\nAll columns match the schema.")
+                    f.write("Validation status: True\n")
                 else:
                     f.write("Validation status: False\n")
-                    if missing_in_data:
-                        f.write(f"Missing columns in data: {list(missing_in_data)}\n")
-                    if extra_in_data:
-                        f.write(f"Extra columns in data: {list(extra_in_data)}\n")
 
             return validation_status
 
